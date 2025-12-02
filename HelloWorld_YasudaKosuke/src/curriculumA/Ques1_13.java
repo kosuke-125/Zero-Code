@@ -5,82 +5,82 @@ public class Ques1_13 {
 
 		// 変数の型と箱を書く
 		// バイト型
-		byte num1;
+		byte numbyt;
 		// 短整数型
-		short num2;
+		short numsho;
 		// 整数型
-		int num3;
+		int numint;
 		// 長整数型
-		long num4;
+		long numlon;
 		// 短精度浮動小数点
-		float num5;
+		float numflo;
 		// 倍精度浮動小数点
-		double num6;
+		double numdou;
 		// 文字型
-		char word1;
+		char wordcha;
 		// 文字列型
-		String word2;
+		String wordstr;
 		// ブーリアン型
-		boolean b;
+		boolean isactiveboo;
 
 		// 各箱の中の変数を(初期値(0など)を代入して)初期化する
 		// バイト型
-		num1 = 0;
+		numbyt = 0;
 		// 短整数型
-		num2 = 0;
+		numsho = 0;
 		// 整数型
-		num3 = 0;
+		numint = 0;
 		// 長整数型
-		num4 = 0;
+		numlon = 0;
 		// 短精度浮動小数点
-		num5 = 0;
+		numflo = 0;
 		// 倍精度浮動小数点
-		num6 = 0;
+		numdou = 0;
 		// 文字型
-		word1 = '\u0000';
+		wordcha = '\u0000';
 		// 文字列型
-		word2 = "";
+		wordstr = null;
 		// ブーリアン型
-		b = false;
+		isactiveboo = false;
 
 		// 初期化した変数にそれぞれ値を代入していく
-		num1 = 10;
+		numbyt = 10;
 		// 短整数型
-		num2 = 100;
+		numsho = 100;
 		// 整数型
-		num3 = 1000;
+		numint = 1000;
 		// 長整数型
-		num4 = 10000;
+		numlon = 10000;
 		// 短精度浮動小数点
-		num5 = 9.5f;
+		numflo = 9.5f;
 		// 倍精度浮動小数点
-		num6 = 10.5;
+		numdou = 10.5;
 		// 文字型
-		word1 = 'a';
+		wordcha = 'a';
 		// 文字列型
-		word2 = "ハロー";
+		wordstr = "ハロー";
 		// ブーリアン型
-		b = true;
+		isactiveboo = true;
 
 		/*
 		 * それぞれ計算をしていき結果を出す
 		 * 必要に応じて型変換を行う
 		 */
 
-		System.out.println(num1+num2+num3+num4);
+		System.out.println(numbyt + numsho + numint + numlon);
 
 		// キャスト(int)をすることによって結果を整数型に変える
-		System.out.println((int)(num5+num6));
+		System.out.println((int)(numflo + numdou));
 
-		System.out.println(word1+word2+b);
+		System.out.println(wordcha + wordstr + isactiveboo);
 
-		System.out.println((int)(num1+num2+num3+num4+num5+num6));
+		System.out.println((int)(numbyt + numsho + numint + numlon + numflo + numdou));
 
-		System.out.println(num1*num2*num3*num4);
+		System.out.println(numbyt * numsho * numint * numlon);
 
-		System.out.println(num6/num2);
+		System.out.println(numdou / numsho);
 
-		System.out.println(num1-num2);
+		System.out.println(numbyt - numsho);
 
 
 		/*
@@ -88,9 +88,9 @@ public class Ques1_13 {
 		 *数字としての型を使えていないのでintを使う
 		 */
 
-		int num=20;
-		int num7=23;
-		System.out.println("ハローJAVA"+(num+num7));
+		int num = 20;
+		int num1 = 23;
+		System.out.println("ハローJAVA" + (num+num1));
 
 
 		// 変数の宣言と代入
@@ -105,21 +105,65 @@ public class Ques1_13 {
 		double bmi = weight / (heightInMeters * heightInMeters);
 
 		// 出力
-		System.out.println("初めまして、" + name + "です。");
-		
+		System.out.println("初めまして" + name + "です。");
+
 		System.out.println("年齢は" + age + "歳です。");
-		
+
 		System.out.println("身長は" + height + "cmです。");
-		
+
 		System.out.println("体重は" + weight + "kgです。");
-		
+
 		System.out.println("好きな食べ物は" + like + "です。");
-		
+
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です。");
-		
-		
-		
-		
+
+
+		// 再代入前に合計用の変数に一時保存
+		int ageSum = age;
+		double heightSum = height;
+		double weightSum = weight;
+
+
+		/*
+		 * 新たな変数を再代入
+		 * 型を使わないように注意する	←再宣言になってしまう
+		 */
+
+		name = "鈴木一郎";
+		age = 24;
+		height = 168.5;
+		weight = 64.2;
+		like = "オムライス";
+		bmi = 22.6;
+
+
+		System.out.println("初めまして" + name + "です。");
+
+		System.out.println("年齢は" + age + "歳です。");
+
+		System.out.println("身長は" + height + "cmです。");
+
+		System.out.println("体重は" + weight + "kgです。");
+
+		System.out.println("好きな食べ物は" + like + "です。");
+
+		System.out.println("BMIは" + bmi+ "です。");
+
+
+		// 合計の計算
+		ageSum += age;
+		heightSum += height;
+		weightSum += weight;
+
+		// 合計の出力
+		System.out.println("初めまして" + name + "です。");
+		System.out.println("年齢の合計は" + ageSum + "歳です。");
+		System.out.println("身長の合計は" + heightSum + "cmです。");
+		System.out.println("体重の合計は" + weightSum + "kgです。");
+		System.out.println("好きな食べ物は" + like + "です。");
+
+
+
 	}
 
 
