@@ -6,9 +6,9 @@ public class SelfIntroduction {
 	//氏名
 	String name = "安田　光佑";
 	//年齢
-	String  age ="25";
+	int  age = 25;
 	//趣味
-	String hobby ="野球観戦";
+	String hobby = "野球観戦";
 	
 	
 	/*
