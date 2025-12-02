@@ -99,7 +99,7 @@ public class Ques1_13 {
 		double height = 170.5; // cm
 		double weight = 62.2;  // kg
 		String like = "寿司";
-		
+
 		// BMIの計算（身長をmに変換）
 		double heightInMeters = height / 100;
 		double bmi = weight / (heightInMeters * heightInMeters);
@@ -153,41 +153,63 @@ public class Ques1_13 {
 
 		// 合計の出力
 		System.out.println("初めまして" + name + "です。");
-		
+
 		System.out.println("年齢の合計は" + ageSum + "歳です。");
-		
+
 		System.out.println("身長の合計は" + heightSum + "cmです。");
-		
+
 		System.out.println("体重の合計は" + weightSum + "kgです。");
-		
+
 		System.out.println("好きな食べ物は" + like + "です。");
-		
+
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です。");
-		
+
 
 		// 合計の計算
 		ageSum += age;
 		heightSum += height;
 		weightSum += weight;
-		
+
 		// 合計の出力
-        System.out.println("私の名前は" + name + "です。");
-        
+		System.out.println("私の名前は" + name + "です。");
+
 		System.out.println("年齢の合計は" + ageSum + "歳です。");
-		
-        System.out.println("身長の合計は" + heightSum + "cmです。");
-        
-        System.out.println("体重の合計は" + weightSum + "kgです。");
-        
-        System.out.println("好きな食べ物は" + like + "です。");
-        
-        System.out.println("BMIは" + String.format("%.2f", bmi) + "です。");
-        
-        System.out.println((ageSum >= 25));
-        
-        
-        
-        
+
+		System.out.println("身長の合計は" + heightSum + "cmです。");
+
+		System.out.println("体重の合計は" + weightSum + "kgです。");
+
+		System.out.println("好きな食べ物は" + like + "です。");
+
+		System.out.println("BMIは" + String.format("%.2f", bmi) + "です。");
+
+		System.out.println((ageSum >= 25));
+
+
+		// 数値から文字列に変換
+		// 文字列に変換
+		String ageStr = String.valueOf(age);
+		String heightStr = String.valueOf(height);
+		String weightStr = String.valueOf(weight);
+
+		// つなげて出力
+		System.out.println("年齢：" + ageStr + "歳、身長：" + heightStr + "cm、体重：" + weightStr + "kgです。");
+
+		// 文字列から整数に変換
+		int ageInt = Integer.parseInt(ageStr);
+		/*
+		 *体重は小数点含んでいるからInteger.parseIntでは変換できない
+		 *Double.parseDoubleを使ってintに変換
+		 */
+		int heightInt = (int)Double.parseDouble(heightStr);
+
+		// 条件判定して出力
+		boolean result = (ageInt >= 25) || (heightInt >= 160);
+
+		System.out.println(result);
+
+
+
 
 
 	}
