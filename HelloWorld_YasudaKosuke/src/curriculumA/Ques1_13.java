@@ -165,7 +165,7 @@ public class Ques1_13 {
 		weightSum += weight;
 		
 		// 合計の出力
-        System.out.println("私の名前は" +name+ "です。");
+        System.out.println("私の名前は" + name + "です。");
 		System.out.println("年齢の合計は" + ageSum + "歳です。");
         System.out.println("身長の合計は" + heightSum + "cmです。");
         System.out.println("体重の合計は" + weightSum + "kgです。");
