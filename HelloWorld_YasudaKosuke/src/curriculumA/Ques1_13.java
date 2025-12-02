@@ -99,10 +99,11 @@ public class Ques1_13 {
 		double height = 170.5; // cm
 		double weight = 62.2;  // kg
 		String like = "寿司";
-
+		
 		// BMIの計算（身長をmに変換）
 		double heightInMeters = height / 100;
 		double bmi = weight / (heightInMeters * heightInMeters);
+		double bmi1 = bmi; // 一人目のBMIを保存
 
 		// 出力
 		System.out.println("初めまして" + name + "です。");
@@ -116,6 +117,14 @@ public class Ques1_13 {
 		System.out.println("好きな食べ物は" + like + "です。");
 
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です。");
+
+
+		// 再代入前に合計用の変数に一時保存
+		int ageSum = age;
+		double heightSum = height;
+		double weightSum = weight;
+		double bmiSum = bmi1; // ← ここ追加
+
 
 		/*
 		 * 新たな変数を再代入
@@ -148,8 +157,22 @@ public class Ques1_13 {
 		System.out.println("身長の合計は" + heightSum + "cmです。");
 		System.out.println("体重の合計は" + weightSum + "kgです。");
 		System.out.println("好きな食べ物は" + like + "です。");
+		System.out.println("BMIは" + String.format("%.1f", bmi) + "です。");
 
+		// 合計の計算
+		ageSum += age;
+		heightSum += height;
+		weightSum += weight;
 		
+		// 合計の出力
+        System.out.println("私の名前は" +name+ "です。");
+		System.out.println("年齢の合計は" + ageSum + "歳です。");
+        System.out.println("身長の合計は" + heightSum + "cmです。");
+        System.out.println("体重の合計は" + weightSum + "kgです。");
+        System.out.println("好きな食べ物は" + like + "です。");
+        System.out.println("BMIは" + String.format("%.2f", bmi) + "です。");
+        System.out.println((ageSum >= 25));
+
 
 	}
 
