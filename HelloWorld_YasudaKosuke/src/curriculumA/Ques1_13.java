@@ -117,13 +117,6 @@ public class Ques1_13 {
 
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です。");
 
-
-		// 再代入前に合計用の変数に一時保存
-		int ageSum = age;
-		double heightSum = height;
-		double weightSum = weight;
-
-
 		/*
 		 * 新たな変数を再代入
 		 * 型を使わないように注意する	←再宣言になってしまう
@@ -149,12 +142,6 @@ public class Ques1_13 {
 
 		System.out.println("BMIは" + bmi+ "です。");
 
-
-		// 合計の計算
-		ageSum += age;
-		heightSum += height;
-		weightSum += weight;
-
 		// 合計の出力
 		System.out.println("初めまして" + name + "です。");
 		System.out.println("年齢の合計は" + ageSum + "歳です。");
@@ -162,7 +149,7 @@ public class Ques1_13 {
 		System.out.println("体重の合計は" + weightSum + "kgです。");
 		System.out.println("好きな食べ物は" + like + "です。");
 
-
+		
 
 	}
 
