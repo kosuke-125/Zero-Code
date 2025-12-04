@@ -55,7 +55,7 @@ public class Ques2_1_10 {
 		int num = scanner.nextInt(); 
 		
 		/* コンソールから整数を読み取る
-		*１行丸ごと文字列として読み取る
+		*  改行は読み取らないので注意
 		*/
 		
 		if (num > 0) {
@@ -88,6 +88,12 @@ public class Ques2_1_10 {
 			System.out.println("不可");
 		}
 
+		scanner.nextLine();// 改行消化用
+		/*
+		 * nextIntからnextLineを使うときは改行消化が必要
+		 * nextIntはスペースや改行で区切られた数字しか読めない
+		 * nextLineは改行も一緒に消化してくれる
+		 */
 		System.out.print("文字列を入力してください: ");
 		String input = scanner.nextLine();
 
@@ -152,8 +158,6 @@ public class Ques2_1_10 {
 			System.out.println("無効な月です");
 		}
 		scanner.close();  // スキャナを閉じる（お作法として）
-
-
 	}
 }
 
