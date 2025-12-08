@@ -106,18 +106,17 @@ public class Question3 {
 
 		}
 		System.out.println("終了しました");
-		scanner.close();	// スキャナを閉じる
 
 		for (int number1 = 1; number1 <= 9; number1++) {
 
 			for (int number2 = 1; number2 <= 9; number2++) {
 				int result = number1 * number2;
-				String result1;
+				/*String result1;
 				if (result < 10) {
 					result1 = "0";
 				} else {
 					result1 = "";
-				}
+				}*/
 				// フォーマット使用によりif文削除
 				System.out.print(String.format("%02d" , number1 ) + "*" + String.format("%02d" , number2 )+ "=" + String.format("%02d" ,result));
 				if (number2 < 9) {
@@ -146,7 +145,7 @@ public class Question3 {
 		}
 
 		System.out.println("終了しました");
-		scanner.close();
+		scanner.close(); // スキャナを閉じる
 	}
 
 }
