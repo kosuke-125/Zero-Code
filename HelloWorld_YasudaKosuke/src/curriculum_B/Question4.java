@@ -13,7 +13,7 @@ public class Question4 {
 		System.out.println("----------");
 		// 配列の全要素を逆順に表示
 		int[] array2 = {10,20,30,40,50};
-		for (int i1 = 0; i1 < 5 ; i1++) {
+		for (int i1 = array2.length -1 ; i1 >= 0 ; i1--) {
 			System.out.println(array2[i1]);
 		}
 
@@ -24,7 +24,7 @@ public class Question4 {
 		for (int i2 = 0; i2 < array3.length; i2++){
 			sum += array3[i2];
 		}
-			System.out.println("合計値は" + sum);
+		System.out.println("合計値は" + sum);
 
 		System.out.println("----------");
 		// 配列の最大最小値を求めて表示
@@ -84,22 +84,22 @@ public class Question4 {
 		}
 		// 二次元配列を使ってすべての要素を足して表示
 		int[][] array8 = {{10, 20, 30},{40, 50,60},{70, 80, 90}};
-			int sum1 = 0;
-			for (int i5 = 0; i5 < array8.length; i5++) { // 行を回す
-				for (int j1 = 0; j1 < array8[i5].length; j1++) { // 列を回す
-					sum1 += array8[i5][j1]; // 要素を足す
-				}
+		int sum1 = 0;
+		for (int i5 = 0; i5 < array8.length; i5++) { // 行を回す
+			for (int j1 = 0; j1 < array8[i5].length; j1++) { // 列を回す
+				sum1 += array8[i5][j1]; // 要素を足す
 			}
-			System.out.println("合計値は" + sum1);
+		}
+		System.out.println("合計値は" + sum1);
 
-			System.out.println("----------");
+		System.out.println("----------");
 		// 2次元配列を使って最大最小値を表示
 		int[][] array9 = {{12, 15, 8}, {6, 19, 25}, {30, 2, 10}};
 		int max1 = array9[0][0];
 		int min1 = array9[0][0];
 
 		for (int i6 = 0; i6 < array9.length; i6++) {
-			for (int j2 = 0; j2 < array9.length; j2++) {
+			for (int j2 = 0; j2 < array9[i6].length; j2++) {
 				if (array9[i6][j2] > max1) {
 					max1 = array9[i6][j2];
 				}
@@ -108,7 +108,7 @@ public class Question4 {
 				}
 			}
 		}
-		System.out.println("最小値は" + max1);
+		System.out.println("最大値は" + max1);
 		System.out.println("最小値は" + min1);
 
 		System.out.println("----------");
