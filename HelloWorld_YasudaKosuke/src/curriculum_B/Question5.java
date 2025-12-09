@@ -32,7 +32,7 @@ public class Question5 {
 		int result = doubleValue(10);
 		System.out.println("10 を 2 倍すると " + result + " です。");
 
-
+		// Q3の呼び出し
 		int num1 = 7;
 		int num2 = 10;
 
