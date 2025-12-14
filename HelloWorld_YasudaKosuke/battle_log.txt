@@ -1,0 +1,32 @@
+=== バトル開始 ===
+k VS Daemon
+先攻: k
+
+--- ターン1 ---
+k の攻撃！
+Daemon HP: 67
+Daemon の攻撃！
+k HP: 84
+
+--- ターン2 ---
+k の攻撃！
+Daemon HP: 49
+Daemon の攻撃！
+k HP: 72
+
+--- ターン3 ---
+k の攻撃！
+Daemon HP: 31
+Daemon の攻撃！
+k HP: 60
+
+--- ターン4 ---
+k の攻撃！
+Daemon HP: 13
+Daemon の攻撃！
+k HP: 48
+
+--- ターン5 ---
+k の攻撃！
+Daemon HP: -5
+勝者: k
