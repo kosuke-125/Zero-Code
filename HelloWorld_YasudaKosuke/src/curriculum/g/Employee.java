@@ -1,8 +1,8 @@
 package curriculum.g;
 
 public class Employee {
-	String employeeId; // 社員ID
-	String name; // 名前
+	private String employeeId; // 社員ID
+	private String name; // 名前
 	
 	public void setEmployeeId(String id) { // 社員IDを設定するメソッド
 		this.employeeId = id;
