@@ -20,7 +20,7 @@ public class Main {
 			int cpuHand = cpu.getHand();
 			
 		System.out.println("あなたの手:" + player.handName(playerHand));
-		System.out.println("コンピュータの手:" + cpu.handName(cpuHand));
+		System.out.println("コンピュータの手:" + player.handName(cpuHand));
 		
 		int result = player.judge(playerHand, cpuHand);
 		

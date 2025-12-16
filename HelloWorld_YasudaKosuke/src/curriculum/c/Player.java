@@ -10,6 +10,7 @@ public class Player {
 	/*
 	 *  勝敗判定(戻り値で結果を返す)
 	 *  1:勝ち, 0:あいこ, -1:負け
+	 *  じゃんけんで手の組み合わせで勝敗を分けている
 	 */
 	int judge(int player, int cpu) { 
 		if (player == cpu) {
