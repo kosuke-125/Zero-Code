@@ -7,63 +7,67 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-		Scanner scanner = new Scanner(System.in);
-		Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-		// ===== Player 作成 =====
-		System.out.print("プレイヤー名を入力してください: ");
-		String playerName = scanner.nextLine();
-		Player player = new Player(playerName);
-		// ===== Deamon 読み込み =====
-		Daemon deamon = Daemon.loadDeamon("daemon_status.txt");
-		// ログ保存用
-		StringBuilder log = new StringBuilder();
-		
-		log.append("=== バトル開始 ===\n");
-        log.append(player.name + " VS " + deamon.name + "\n");
+        // ===== Player 作成 =====
+        System.out.print("プレイヤー名を入力してください: ");
+        String playerName = scanner.nextLine();
+        Player player = new Player(playerName);
+
+        // ===== Daemon 読み込み =====
+        Daemon daemon = Daemon.loadDeamon("daemon_status.txt");
+
+        // ログ保存用
+        StringBuilder log = new StringBuilder();
+        log.append("=== バトル開始 ===\n");
+        log.append(player.getName() + " VS " + daemon.getName() + "\n");
 
         // ===== 先攻決定 =====
         Character first;
         Character second;
 
-        if (player.sp > deamon.sp) {
+        if (player.getSp() > daemon.getSp()) {
             first = player;
-            second = deamon;
-        } else if (player.sp < deamon.sp) {
-            first = deamon;
+            second = daemon;
+        } else if (player.getSp() < daemon.getSp()) {
+            first = daemon;
             second = player;
         } else {
             // 同じ場合はランダム
-            first = random.nextBoolean() ? player : deamon;
-            second = (first == player) ? deamon : player;
+            first = random.nextBoolean() ? player : daemon;
+            second = (first == player) ? daemon : player;
         }
 
-        log.append("先攻: " + first.name + "\n");
+        log.append("先攻: " + first.getName() + "\n");
 
         int turn = 1;
+
         // ===== バトルループ =====
-        while (player.isAlive() && deamon.isAlive()) {
-        	
-        	log.append("\n--- ターン" + turn + " ---\n");
+        while (player.isAlive() && daemon.isAlive()) {
+
+            log.append("\n--- ターン " + turn + " ---\n");
+
             first.attack(second);
-            log.append(first.name + " の攻撃！\n");
-            log.append(second.name + " HP: " + second.hp + "\n");
+            log.append(first.getName() + " の攻撃！\n");
+            log.append(second.getName() + " HP: " + second.getHp() + "\n");
 
             if (!second.isAlive()) break;
 
             second.attack(first);
-            log.append(second.name + " の攻撃！\n");
-            log.append(first.name + " HP: " + first.hp + "\n");
-            turn ++;
+            log.append(second.getName() + " の攻撃！\n");
+            log.append(first.getName() + " HP: " + first.getHp() + "\n");
+
+            turn++;
         }
 
         // ===== 勝敗判定 =====
         if (player.isAlive()) {
-            log.append("勝者: " + player.name + "\n");
+            log.append("勝者: " + player.getName() + "\n");
         } else {
-            log.append("勝者: " + deamon.name + "\n");
+            log.append("勝者: " + daemon.getName() + "\n");
         }
 
         // ===== ファイル出力 =====
@@ -73,6 +77,5 @@ public class Main {
 
         System.out.println("バトル終了。結果は battle_log.txt に出力されました。");
         scanner.close();
-	
-	}
+    }
 }
