@@ -1,8 +1,8 @@
 package curriculum.j;
 
 public abstract class Employee implements Billable {
-	String id;
-	String name;
+	private String id;
+	private String name;
 
 	// コンストラクタで初期化
 	public Employee(String id, String name) {
